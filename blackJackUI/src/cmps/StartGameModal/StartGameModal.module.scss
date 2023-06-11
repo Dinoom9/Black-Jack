@@ -1,0 +1,120 @@
+.StartGameModalContainer {
+    position: fixed;
+    user-select: none;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.318);
+}
+
+.StartGameModalContainer .StartGameModal {
+    padding: 1rem;
+    height: 500px;
+    width: 750px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 7px;
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.487);
+    background-color: black;
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 110px;
+
+    >h2 {
+        color: white;
+        font-size: 50px;
+
+        >span {
+            color: red;
+        }
+    }
+
+}
+
+.StartGameModalContainer .StartGameModal .LabelAndButtonContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 90px;
+
+    >span {
+        color: white;
+        font-family: 'Alfa Slab One', cursive;
+        font-size: 26px;
+        letter-spacing: 0.1rem;
+    }
+}
+
+.StartGameModalContainer .StartGameModal .LabelAndButtonContainer .ImgButton {
+    position: relative;
+    cursor: pointer;
+
+    >img {
+        height: 120px;
+        width: 120px;
+    }
+
+    >span {
+        font-family: 'Alfa Slab One', cursive;
+        position: absolute;
+        color: black;
+        top: 47%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 500;
+
+    }
+
+}
+
+.SpinningButton {
+    animation-name: rotateAnimation;
+    animation-duration: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.StartGameModalContainer .StartGameModal .LabelAndButtonContainer .StartGameModalButtonsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 18px;
+
+    >button:first-child {
+        background-color: red;
+    }
+
+    >button {
+        text-shadow: 2px 1px 1px black;
+        height: 60px;
+        width: 120px;
+        background-color: rgba(160, 160, 160, 0.452);
+        color: white;
+        border: none;
+        box-shadow: 2px 2px 2px black;
+        border-radius: 5px;
+    }
+
+    >button:active {
+        box-shadow: 1px 1px 1px inset black;
+    }
+
+}
